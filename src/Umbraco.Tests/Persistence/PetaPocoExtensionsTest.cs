@@ -47,7 +47,7 @@ namespace Umbraco.Tests.Persistence
 
                 double totalBytes1;
                 IEnumerable<string> keys;
-                Console.Write(Database.PocoData.PrintDebugCacheReport(out totalBytes1, out keys));
+                Debug.Print(Database.PocoData.PrintDebugCacheReport(out totalBytes1, out keys));
 
                 result.Add(new Tuple<double, int, IEnumerable<string>>(totalBytes1, keys.Count(), keys));
             }
