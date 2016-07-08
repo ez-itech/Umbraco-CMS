@@ -26,6 +26,8 @@ build_script:
 
     XCOPY "..\src\Umbraco.Tests\unit-test-log4net.CI.config" "..\src\Umbraco.Tests\unit-test-log4net.config" /Y
     
+    TYPE "..\src\Umbraco.Tests\unit-test-log4net.config"
+    
     %MSBUILD% "..\src\Umbraco.Tests\Umbraco.Tests.csproj" /consoleloggerparameters:Summary;ErrorsOnly
 
     build.bat nopause %release% build%APPVEYOR_BUILD_NUMBER%
